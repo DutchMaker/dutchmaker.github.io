@@ -1,0 +1,122 @@
+<html>
+<head>
+  <title>DM-02 8-Bit Computer Emulator</title>
+  <link href="css/emulator.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="assembly" id="assembly"></div>
+
+    <div class="screen">
+      <pre class="text word-wrap" id="textdisplay"></pre>
+      <span class="type">TEXT DISPLAY&trade;</span>
+    </div>
+
+    <div class="screen video">
+      <canvas class="video" id="videodisplay" width="240" height="200"></canvas>
+      <span class="type">VIDEO DISPLAY&trade;<br>(240x200 pixels)</span>
+    </div>
+
+    <div class="state">
+      <div class="panel">
+        <span class="title">Registers</span>
+        <div class="register">
+          <span class="name">A</span>
+          <span class="value" id="ra">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">B</span>
+          <span class="value" id="rb">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">C</span>
+          <span class="value" id="rc">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">H</span>
+          <span class="value" id="rh">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">L</span>
+          <span class="value" id="rl">$00</span>
+        </div>
+        <div class="register">
+          <span class="name">IR</span>
+          <span class="value" id="rir">$00</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <span class="title">Flags</span>
+        <div class="flag">
+          <span class="name">N</span>
+          <span class="value v0" id="fn">&#11044;</span>
+        </div>
+        <div class="flag">
+          <span class="name">Z</span>
+          <span class="value v0" id="fz">&#11044;</span>
+        </div>
+        <div class="flag">
+          <span class="name">O</span>
+          <span class="value v0" id="fo">&#11044;</span>
+        </div>
+        <div class="flag">
+          <span class="name">C</span>
+          <span class="value v0" id="fc">&#11044;</span>
+        </div>
+      </div>
+
+      <div class="panel addresses">
+        <span class="title">Addresses</span>
+        <div class="register">
+          <span class="name">PC</span>
+          <span class="value" id="pc">$0000</span>
+        </div>
+        <div class="register">
+          <span class="name">SP</span>
+          <span class="value" id="sp">$0000</span>
+        </div>
+      </div>
+
+      <div class="panel controls">
+        <span class="title">Controls</span>
+
+        <div class="buttons">
+          <div class="buttonrow">
+            <button id="button_startstop">Start</button>
+            <button id="button_halt" disabled>Halt</button>
+            <button id="button_step" disabled>Step</button>
+          </div>
+          <div class="buttonrow loadfromdisk">
+            <input type="file" id="program_file" />
+            <button id="button_load" title="Load program code from local file">Load program from disk</button>
+          </div>
+          <div class="buttonrow">
+            <select id="program_server">
+              <option>Load program from server</option>
+              <option value="emulator_demo.bin">emulator_demo.bin</option>
+              <option value="emulator_demo.bin">hello_world.bin</option>
+            </select>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="check">
+            <label for="single_step">Single Step</label>
+            <input type="checkbox" id="single_step" />
+          </div>
+          <div class="text">
+            <label for="iterations_per_update">Iterations per update</label>
+            <input type="text" id="iterations_per_update" accept=".bin" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/emulator.js"></script>
+
+</body>
+</html>
