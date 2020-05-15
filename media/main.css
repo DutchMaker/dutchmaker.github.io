@@ -25,6 +25,11 @@ img.main {
     border-bottom: 3px solid #000;
 }
 
+img.secondary {
+    width: 200px;
+    border-bottom: 3px solid #000;
+}
+
 h1 {
     font-size: 50px;
 }
@@ -107,4 +112,19 @@ p.social img {
     .project-item-sticky-container,
     .submissions-icons {
         display: none;
+    }
+
+ul {
+    text-align: left;
+    display: inline-block;
+    padding: 0;
+}
+
+    ul li {
+        padding: 5px 0;    
+    }
+
+    ul a {
+        font-size: 25px;
+        color: #000;
     }
