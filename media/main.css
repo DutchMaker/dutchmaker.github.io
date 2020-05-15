@@ -75,6 +75,8 @@ p.social img {
         .project-item .project-item-cover {
             width: 100%;
             height: 100%;
+            background-position: center;
+            background-size: cover;
         }
 
         .project-item .project-item-headline {
