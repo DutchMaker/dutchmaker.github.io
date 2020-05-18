@@ -100,7 +100,7 @@ p.social img {
 
         .project-item .project-item-headline {
             position: absolute;
-            bottom: 3px;
+            bottom: -1px;
             left: 0;
         }
 
