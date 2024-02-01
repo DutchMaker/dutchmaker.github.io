@@ -1,5 +1,6 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
 }
 
 .centerFlex {
@@ -22,7 +23,7 @@ body {
 }
 
 img.main {
-    border-bottom: 3px solid #000;
+    width: 960px;
 }
 
 img.secondary {
@@ -49,8 +50,7 @@ h2 {
 }
 
 p.social {
-    border-top: 3px solid;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 p.social img {
