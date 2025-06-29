@@ -4,18 +4,7 @@ body {
 }
 
 .centerFlex {
-    display:-ms-flexbox;
-    -ms-flex-pack:center;
-    -ms-flex-align:center;
-    display:-moz-box;
-    -moz-box-pack:center;
-    -moz-box-align:center;
-    display:-webkit-box;
-    -webkit-box-pack:center;
-    -webkit-box-align:center;
-    display:box;
-    box-pack:center;
-    box-align:center;
+
 }
 
 .container {
@@ -62,6 +51,8 @@ p.social img {
     width: 960px;
     border-top: 3px solid #000;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-holder.secondary {
